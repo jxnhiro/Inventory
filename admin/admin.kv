@@ -1,0 +1,140 @@
+#: import Window kivy.core.window.Window
+
+<adminWindow>:
+    id:main_window
+    orientation:'vertical'
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        size_hint_y: None
+        height: 25
+        id:tombolUserAdmin
+        Label: 
+            size_hint_x: 0.7
+        Label: 
+            size_hint_x: 0.15
+            color: (0,0,0,1)
+            text: 'Logged In:'
+        Button:
+            size_hint_x: 0.15
+            id: userLoggedInAdmin
+            text: 'admin'
+            underline: True
+            on_release: root.logout()
+    BoxLayout:
+        id: top_navigation
+        size_hint_y: None
+        height: 30
+        canvas.before:
+            Color:
+                rgba:(0,0,0,0.8)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'Panel Admin'
+            bold: True
+            size_hint: (1,None)
+            height: 30
+    BoxLayout:
+        id: content_navigation
+
+        BoxLayout:
+            id: navigation_tabs
+            size_hint_x: .2
+            orientation: 'vertical'
+            spacing: 3
+            canvas.before:
+                Color:
+                    rgba: (0,0,0,0.6)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            ToggleButton:
+                id: products_toggle
+                text: 'Products'
+                size_hint_y: .1
+                state: 'down'
+                group: 'admin_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: user_toggle
+                text: 'Users'
+                size_hint_y: .1
+                group: 'admin_navs'
+                on_state: root.change_screen(self)
+            Label:
+                id: spacing
+                text: ''
+                size_hint_y: .7
+        BoxLayout:
+            id: all_content
+            size_hint_x: .8
+            padding: (20,10)
+            ScreenManager:
+                id:scrn_manager
+                Screen:
+                    id: product_content
+                    name: 'productContent'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        BoxLayout:
+                            id: scrn_product_contents
+                        BoxLayout:
+                            id: ops_fields_p
+                            spacing: 10
+                            size_hint_y: None
+                            height: 35
+                        BoxLayout:
+                            id: ops_btns_p
+                            spacing: 10
+                            size_hint_y: None
+                            height: 45
+                            Button:
+                                id: crud_add_p
+                                text: 'Add Product'
+                                on_release: root.add_product_field()
+                            Button:
+                                id: crud_update_p
+                                text: 'Edit Product'
+                                on_release: root.update_product_field()
+                            Button:
+                                id: crud_remove_p
+                                text: 'Delete Product'
+                                on_release: root.remove_product_field()
+                Screen:
+                    id: users_content
+                    name: 'usersContent'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        BoxLayout:
+                            id: scrn_contents
+                        BoxLayout:
+                            id: ops_fields
+                            spacing: 10
+                            size_hint_y: None
+                            height: 35
+                        BoxLayout:
+                            id: ops_btn
+                            spacing: 10
+                            size_hint_y: None
+                            height: 45
+                            Button:
+                                id: crud_add
+                                text: 'Add User'
+                                on_release: root.add_user_field()
+                            Button:
+                                id: crud_update
+                                text: 'Edit User'
+                                on_release: root.update_user_field()
+                            Button:
+                                id: crud_remove
+                                text: 'Delete User'
+                                on_release: root.remove_user_field()

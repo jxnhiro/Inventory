@@ -1,0 +1,164 @@
+<controlWindow>:
+    id: mainWindow
+    orientation: 'vertical'
+    canvas.before:
+        Color: 
+            rgba: (1,1,1,1)
+        Rectangle: 
+            size: self.size
+            pos: self.pos
+    
+    BoxLayout:
+        orientation: "vertical"
+        id: headerBox
+        size_hint_y: None 
+        height: 80
+        Label: 
+            size_hint_y: 1
+            text: 'POS'
+            bold: True
+            color: (0,0,0,1)
+        BoxLayout:
+            size_hint_y: None
+            height: 20
+            id:tombolUser
+            Label: 
+                size_hint_x: 0.7
+            Label: 
+                size_hint_x: 0.15
+                color: (0,0,0,1)
+                text: 'Yang sekarang memakai:'
+            Button:
+                size_hint_x: 0.15
+                id: userLoggedIn
+                text: 'admin'
+                underline: True
+                on_release: root.logout()
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 55
+        Button:
+            text: 'Barang yang dipilih:'
+            size_hint_x: .275
+        Button:
+            id: produk_sekarang
+            text: 'Produk Contoh'
+        Button:
+            id: harga_sekarang
+            text: 'Rp0,00'
+            size_hint_x: .3
+    BoxLayout:
+        padding: 10
+        BoxLayout:
+            id: detil_produk
+            orientation: "vertical"
+            size_hint_x: .8
+            spacing: 10
+
+            BoxLayout:
+                id: label_produk
+                size_hint_y: None
+                height: 40
+                canvas.before:
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                Button: 
+                    text: 'Jumlah'
+                    size_hint_x: 0.20
+                Button: 
+                    text: 'Kode Produk'
+                    size_hint_x: 0.45
+                Button:
+                    text: 'Pembeli'
+                    size_hint_x: 0.35
+
+            BoxLayout:
+                id: product_inputs
+                size_hint_y: None
+                height: 30
+                spacing: 5
+                TextInput:
+                    id: qtyInput
+                    size_hint_x: 0.20
+                TextInput: 
+                    id: productCodeInput
+                    size_hint_x: 0.45
+                    multiline: False
+                    on_text_validate: root.updatePurchases()
+                TextInput: 
+                    id: userInput
+                    size_hint_x: 0.35
+
+            BoxLayout:
+                id:cart_box
+                orientation: 'vertical'
+                BoxLayout:
+                    size_hint_y: None
+                    height: 30
+                    canvas.before:
+                        Color: 
+                            rgba: (0,0,0,0.8)
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    Label: 
+                        text: "Kode"
+                        size_hint_x: .15
+                    Label: 
+                        text: "Nama Produk"
+                        size_hint_x: .2
+                    Label: 
+                        text: "Jumlah"
+                        size_hint_x: .05
+                    Label: 
+                        text: "Diskon"
+                        size_hint_x: .175
+                    Label: 
+                        text: "Harga"
+                        size_hint_x: .175
+                    Label: 
+                        text: "Harga Total"
+                        size_hint_x: .175
+                GridLayout:
+                    id: products
+                    cols: 1
+               
+
+        BoxLayout:
+            id: billPreview
+            orientation: "vertical"
+            size_hint_x: .2
+
+            TextInput:
+                id: receipt_preview
+                readonly: True
+                text: 'Nama Toko\nJalan\n\nTelepon Toko: \nNo Bon:\nTanggal: \n\n'
+            Button:
+                size_hint_y: None
+                height: 40
+                id: previewPrint
+                text: 'Reset'
+                on_press: root.clearAll()
+            Button:
+                size_hint_y: None
+                height: 40
+                id: previewPrint
+                text: 'Print'
+                on_press: root.printNotepad(receipt_preview.text, userInput.text)
+
+    BoxLayout:
+        id:footer
+        size_hint_y: None
+        height: 40
+        canvas.before:
+            Color:
+                rgba: (0,0,0,0.8)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            id:space_footer
+            text: 'Nama Toko'
+            color: (1,1,1,1)

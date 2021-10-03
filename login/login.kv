@@ -1,0 +1,55 @@
+<loginWindow>:
+    id: main_window
+    orientation: "vertical"
+    spacing: 10
+    space_x: self.size[0]/5
+    canvas.before:
+        Color: 
+            rgba: (0,0,0,0)
+            #White
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: main_window.space_x, 10
+        #spacing: 20
+        Label: 
+            id: sp_1
+            text: "Log In"
+            bold: True
+            size_hint_y: None
+            height: 80
+        BoxLayout: 
+            orientation: "vertical"
+            spacing: 10
+            size_hint_y: None
+            height: 80
+            TextInput: 
+                id: usernameField
+                hint_text: "Username"
+                multiline: False
+                focus: True
+                on_text_validate: passwordField.focus = True
+            TextInput: 
+                id: passwordField
+                hint_text: "Password"
+                multiline: False
+                password: True
+                on_text_validate: root.validateUser()
+        Label:
+            id: sp
+            size_hint_y: None
+            height: 40
+        Button:
+            text: "Sign In"
+            size_hint_y: None
+            height: 40
+            on_release: root.validateUser()
+        Label:
+            id: info
+            text: '' 
+            markup: True   
+        Label:
+            id: sp
