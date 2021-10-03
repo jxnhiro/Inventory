@@ -10,3 +10,5 @@ How to use: Import users.json to MongoDB, then open the application in the dist 
 Login: Username: github Password: github
 
 Forgotten password cannnot be reverted as passwords are hashed.
+
+Credits: Tawanda Samuelson for the Kivy and project fundamental basics. Playlist: https://www.youtube.com/watch?v=i6nlVmWTyhg&list=PLW062AfleDZbWPQXjyMeLOlcL8aQ4aLeP
