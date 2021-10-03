@@ -5,7 +5,7 @@ Background: Inventory used to be a solo freelance project for me and a client; u
 
 Technology used: Python, Kivy and MongoDB
 
-How to use: Import MongoDB csv, then open the application in the dist folder, inventory folder, and find inventory.exe. Lastly, log in the application.
+How to use: Import users.json to MongoDB, then open the application in the dist folder, inventory folder, and find inventory.exe. Lastly, log in the application.
 
 Login: Username: github Password: github
 
