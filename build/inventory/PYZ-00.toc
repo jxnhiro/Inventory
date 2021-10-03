@@ -1,4 +1,4 @@
-('D:\\Inventaris 1.2\\build\\inventory\\PYZ-00.pyz',
+('D:\\Inventory\\build\\inventory\\PYZ-00.pyz',
  [('inspect',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\inspect.py',
@@ -14,6 +14,14 @@
   ('importlib.metadata',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\kenny '
+   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\kenny '
+   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\typing.py',
    'PYMODULE'),
   ('contextlib',
    'c:\\users\\kenny '
@@ -587,10 +595,6 @@
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\asyncio\\staggered.py',
    'PYMODULE'),
-  ('typing',
-   'c:\\users\\kenny '
-   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\typing.py',
-   'PYMODULE'),
   ('asyncio.tasks',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\asyncio\\tasks.py',
@@ -863,10 +867,6 @@
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\csv.py',
    'PYMODULE'),
-  ('importlib.abc',
-   'c:\\users\\kenny '
-   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\abc.py',
-   'PYMODULE'),
   ('importlib._bootstrap',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\_bootstrap.py',
@@ -903,6 +903,10 @@
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\os.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\kenny '
+   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\tracemalloc.py',
+   'PYMODULE'),
   ('stringprep',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\stringprep.py',
@@ -910,8 +914,4 @@
   ('_py_abc',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'c:\\users\\kenny '
-   'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\tracemalloc.py',
    'PYMODULE')])

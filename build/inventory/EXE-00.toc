@@ -1,4 +1,4 @@
-('D:\\Inventaris 1.2\\build\\inventory\\inventory.exe',
+('D:\\Inventory\\build\\inventory\\inventory.exe',
  True,
  False,
  True,
@@ -13,7 +13,7 @@
  None,
  None,
  'inventory.pkg',
- [('PYZ-00.pyz', 'D:\\Inventaris 1.2\\build\\inventory\\PYZ-00.pyz', 'PYZ'),
+ [('PYZ-00.pyz', 'D:\\Inventory\\build\\inventory\\PYZ-00.pyz', 'PYZ'),
   ('struct',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\struct.pyo',
@@ -50,14 +50,14 @@
    'C:\\Users\\Kenny '
    'Jinhiro\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
-  ('inventory', 'D:\\Inventaris 1.2\\inventory.spec', 'PYSOURCE'),
+  ('inventory', 'D:\\Inventory\\inventory.spec', 'PYSOURCE'),
   ('inventory.exe.manifest',
-   'D:\\Inventaris 1.2\\build\\inventory\\inventory.exe.manifest',
+   'D:\\Inventory\\build\\inventory\\inventory.exe.manifest',
    'BINARY')],
  [],
  False,
  False,
- 1633237351,
+ 1633239795,
  [('run.exe',
    'c:\\users\\kenny '
    'jinhiro\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
