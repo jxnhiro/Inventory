@@ -53,12 +53,12 @@ class adminWindow(BoxLayout):
     def add_user_field(self):
         target = self.ids.ops_fields
         target.clear_widgets()
-        crud_first = TextInput(hint_text='Nama Pertama',multiline = False)
-        crud_last = TextInput(hint_text='Nama Akhir',multiline = False)
+        crud_first = TextInput(hint_text='First Name',multiline = False)
+        crud_last = TextInput(hint_text='Last Name',multiline = False)
         crud_user = TextInput(hint_text='Username',multiline = False)
         crud_pwd = TextInput(hint_text='Password',multiline = False)
         crud_des = Spinner(text='Operator',values=['Operator','Administrator'])
-        crud_submit = Button(text='Tambah',size_hint_x = None,width=100,on_release=lambda x: self.add_user(crud_first.text,crud_last.text,crud_user.text,crud_pwd.text,crud_des.text))
+        crud_submit = Button(text='Add',size_hint_x = None,width=100,on_release=lambda x: self.add_user(crud_first.text,crud_last.text,crud_user.text,crud_pwd.text,crud_des.text))
          
         target.add_widget(crud_first)
         target.add_widget(crud_last)
@@ -70,13 +70,13 @@ class adminWindow(BoxLayout):
         target = self.ids.ops_fields_p
         target.clear_widgets()
          #code name weight price stock order
-        crud_code = TextInput(hint_text='Kode Produk',multiline = False)
-        crud_name = TextInput(hint_text='Nama Produk',multiline = False)
-        crud_weight = TextInput(hint_text='Berat Produk',multiline = False)
-        crud_price = TextInput(hint_text='Harga Produk',multiline = False)
-        crud_stock = TextInput(hint_text='Stok Produk',multiline = False)
-        crud_order = TextInput(hint_text='Terakhir Order Produk',multiline = False)  
-        crud_submit = Button(text='Tambah',size_hint_x = None,width=100,on_release=lambda x:self.add_product(crud_code.text,crud_name.text,crud_weight.text,crud_price.text,crud_stock.text,crud_order.text))
+        crud_code = TextInput(hint_text='Product Code',multiline = False)
+        crud_name = TextInput(hint_text='Product Name',multiline = False)
+        crud_weight = TextInput(hint_text='Product Weight',multiline = False)
+        crud_price = TextInput(hint_text='Product Price',multiline = False)
+        crud_stock = TextInput(hint_text='Product Stock',multiline = False)
+        crud_order = TextInput(hint_text='Last Date Product Order',multiline = False)  
+        crud_submit = Button(text='Add',size_hint_x = None,width=100,on_release=lambda x:self.add_product(crud_code.text,crud_name.text,crud_weight.text,crud_price.text,crud_stock.text,crud_order.text))
     
         target.add_widget(crud_code)
         target.add_widget(crud_name)

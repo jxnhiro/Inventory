@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6159377566cb0ffc6bf1b2b6"
+  },
+  "first_name": "John",
+  "last_name": "Doe",
+  "user_name": "johnd",
+  "password": "fe538cc88558921d892d069c15773769f111230b8f482c74eb1b6f66564ae010",
+  "designation": "Administrator",
+  "date": {
+    "$date": "2021-10-03T11:54:13.561Z"
+  }
+},{
+  "_id": {
+    "$oid": "615942709dcf39c7c3780714"
+  },
+  "first_name": "Github",
+  "last_name": "Guest",
+  "user_name": "github",
+  "password": "c0b0109d9439de57fe3cf03abeccbc52f4c98170c732d3b69af5e6395ace574e",
+  "designation": "Administrator",
+  "date": {
+    "$date": "2021-10-03T12:41:04.225Z"
+  }
+}]
